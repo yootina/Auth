@@ -1,5 +1,5 @@
 from .models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -7,3 +7,5 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = UserCreationForm.Meta.fields
 
+class CustomUserAuthenticationForm(AuthenticationForm):
+    pass
