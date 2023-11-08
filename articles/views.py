@@ -25,3 +25,13 @@ def create(request):
         'form': form,
     }
     return render(request, 'form.html', context)
+
+
+
+def datail(request, id):
+    article = Article.objects.get(id=id)
+
+    context = {
+        'article': article,
+    }
+    return render(request, 'detail.html', context)
